@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: 'Albert';
+    src: url('./assets/fonts/Albert.woff2') format('woff2');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Soyuz';
+    src: url('./assets/fonts/Soyuz.woff2') format('woff2');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@theme {
+    --bg: "F0F5F0";
+    --white: "FFFFFF";
+    --dark-green: "0A3E09";
+    --light-green: "08F42C";
+
+    --text-green-prim: "0A3E09";
+    --text-green-sec: "002000";
+    --text-green-ter: "717771";
+
+    --text-white-prim: "FFFFFF";
+    --text-white-sec: "BEF2BD";
+    --text-white-ter: "5A8E59";
+}
+
+* {
+    font-family: 'Albert', 'Helvetica', sans-serif;
+}
+
+body{
+    @apply bg-bg;
+}
+
+h1, h2 {
+    font-family: 'Soyuz', 'Arial', sans-serif;
+}
+
+.soyuz {
+    font-family: 'Soyuz', 'Arial', sans-serif;
+}
+
+.albert {
+    font-family: 'Albert', 'Helvetica', sans-serif;
+}
