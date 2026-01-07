@@ -17,18 +17,20 @@
 }
 
 @theme {
-    --bg: "F0F5F0";
-    --white: "FFFFFF";
-    --dark-green: "0A3E09";
-    --light-green: "08F42C";
+    --breakpoint-2xl: 90rem;
 
-    --text-green-prim: "0A3E09";
-    --text-green-sec: "002000";
-    --text-green-ter: "717771";
+    --color-bg: #F0F5F0;
+    --color-white: #FFFFFF;
+    --color-dark-green: #0A3E09;
+    --color-light-green: #08F42C;
 
-    --text-white-prim: "FFFFFF";
-    --text-white-sec: "BEF2BD";
-    --text-white-ter: "5A8E59";
+    --color-text-green-prim: #0A3E09;
+    --color-text-green-sec: #002000;
+    --color-text-green-ter: #717771;
+
+    --color-text-white-prim: #FFFFFF;
+    --color-text-white-sec: #BEF2BD;
+    --color-text-white-ter: #5A8E59;
 }
 
 * {
@@ -49,4 +51,17 @@ h1, h2 {
 
 .albert {
     font-family: 'Albert', 'Helvetica', sans-serif;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-scroll-left {
+    animation: scroll-left 10s linear infinite;
 }
