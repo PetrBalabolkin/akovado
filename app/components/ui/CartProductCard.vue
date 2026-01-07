@@ -11,24 +11,26 @@
       <a :href="`/product/${slug}`" class="xl:text-2xl md:text-xl text-lg font-semibold text-text-green-prim hover:underline">
         {{ title }}
       </a>
-      <div class="flex items-center gap-2">
-        <button
-          @click="handleDecrease"
-          class="w-8 h-8 rounded-full bg-grey-700 flex items-center justify-center hover:bg-grey-600 transition-colors"
-        >
-          <RiSubtractLine class="w-5 h-5 text-text-green-prim" />
-        </button>
-        <span class="w-8 text-center">{{ quantity }}</span>
-        <button
-          @click="handleIncrease"
-          class="w-8 h-8 rounded-full bg-grey-700 flex items-center justify-center hover:bg-grey-600 transition-colors"
-        >
-          <RiAddLine class="w-5 h-5 text-text-green-prim" />
-        </button>
-      </div>
-      <span class="xl:text-2xl md:text-xl text-lg font-semibold text-text-green-prim w-25 text-right">
+      <div class="flex gap-10">
+        <div class="flex items-center gap-2">
+          <button
+              @click="handleDecrease"
+              class="w-8 h-8 rounded-full bg-grey-700 flex items-center justify-center hover:bg-grey-600 transition-colors"
+          >
+            <RiSubtractLine class="w-5 h-5 text-text-green-prim" />
+          </button>
+          <span class="w-8 text-center">{{ quantity }}</span>
+          <button
+              @click="handleIncrease"
+              class="w-8 h-8 rounded-full bg-grey-700 flex items-center justify-center hover:bg-grey-600 transition-colors"
+          >
+            <RiAddLine class="w-5 h-5 text-text-green-prim" />
+          </button>
+        </div>
+        <span class="xl:text-2xl md:text-xl text-lg font-semibold text-text-green-prim w-25 text-right">
         {{ (price * quantity).toFixed(2) }} €
       </span>
+      </div>
     </div>
   </div>
 </template>
