@@ -19,9 +19,10 @@
           </p>
         </div>
         <div class="flex gap-6 items-center">
-          <span class="sm:text-3xl text-2xl font-semibold">{{ product.price }} €</span>
+          <span class="sm:text-3xl text-2xl font-semibold text-text-green-sec">{{ product.price }} €</span>
           <Button
             text="Pridať do košíka"
+            @click="handleAddToCart"
           />
         </div>
       </div>
@@ -41,4 +42,17 @@ const route = useRoute();
 const slug = route.params.slug as string;
 
 const product = findProductBySlug(slug);
+
+const { addToCart } = useCart();
+
+const handleAddToCart = () => {
+  if (product) {
+    addToCart({
+      slug: product.slug,
+      imgSrc: product.imgSrc,
+      title: product.title,
+      price: product.price
+    });
+  }
+};
 </script>
