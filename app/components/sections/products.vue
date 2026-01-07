@@ -12,6 +12,7 @@
         :class="{ 'lg:block hidden': index === 3 }"
         :img-src="product.imgSrc"
         :title="product.title"
+        :slug="product.slug"
         :weight="product.weight"
         :rating="product.rating"
         :price="product.price"
@@ -27,6 +28,7 @@ import { products } from "~/components/products";
 interface Product {
   imgSrc: string;
   title: string;
+  slug: string;
   weight: string;
   rating: number;
   price: number;

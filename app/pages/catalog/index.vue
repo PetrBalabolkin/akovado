@@ -1,7 +1,7 @@
 <template>
   <main class="2xl:w-[1378px] xl:w-[1234px] lg:w-[982px] w-full lg:mx-auto flex flex-col gap-0.5">
     <section class="px-5">
-      <span>
+      <span class="text-text-green-ter">
         <a href="/">akovado →</a>
       </span>
       <h1 class="2xl:text-8xl xl:text-[80px] md:text-7xl sm:text-5xl text-[42px] leading-none text-text-green-prim">
@@ -18,6 +18,7 @@
             :key="index"
             :img-src="product.imgSrc"
             :title="product.title"
+            :slug="product.slug"
             :weight="product.weight"
             :rating="product.rating"
             :price="product.price"
@@ -36,6 +37,7 @@ import { products as productsData } from "~/components/products";
 interface Product {
   imgSrc: string;
   title: string;
+  slug: string;
   weight: string;
   rating: number;
   price: number;

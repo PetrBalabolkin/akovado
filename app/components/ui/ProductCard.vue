@@ -1,5 +1,5 @@
 <template>
-  <div class="h-[320px] sm:rounded-3xl rounded-[20px] overflow-hidden transition-transform duration-300 hover:-translate-y-5">
+  <a :href="`/product/${slug}`" class="h-[320px] sm:rounded-3xl rounded-[20px] overflow-hidden transition-transform duration-300 hover:-translate-y-5">
     <img
       :src="imgSrc"
       :alt="title"
@@ -24,7 +24,7 @@
         {{ price?.toFixed(2) }} €
       </div>
     </div>
-  </div>
+  </a>
 </template>
 
 <script setup lang="ts">
@@ -33,6 +33,7 @@ import { RiStarFill } from "@remixicon/vue";
 defineProps<{
   imgSrc?: string;
   title?: string;
+  slug?: string;
   weight?: string;
   rating?: number;
   price?: number;
