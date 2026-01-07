@@ -20,7 +20,25 @@
         </div>
         <div class="flex gap-6 items-center">
           <span class="sm:text-3xl text-2xl font-semibold text-text-green-sec">{{ product.price }} €</span>
+          <div v-if="productInCart" class="flex items-center gap-4">
+            <button
+              @click="handleDecrease"
+              class="w-12 h-12 rounded-full bg-light-green hover:bg-[#B2F42C] text-text-green-prim text-2xl font-semibold transition duration-300 flex items-center justify-center"
+            >
+              −
+            </button>
+            <span class="text-2xl font-semibold text-text-green-prim min-w-[2rem] text-center">
+              {{ productInCart.quantity }}
+            </span>
+            <button
+              @click="handleIncrease"
+              class="w-12 h-12 rounded-full bg-light-green hover:bg-[#B2F42C] text-text-green-prim text-2xl font-semibold transition duration-300 flex items-center justify-center"
+            >
+              +
+            </button>
+          </div>
           <Button
+            v-else
             text="Pridať do košíka"
             @click="handleAddToCart"
           />
@@ -43,7 +61,11 @@ const slug = route.params.slug as string;
 
 const product = findProductBySlug(slug);
 
-const { addToCart } = useCart();
+const { cart, addToCart, increaseQuantity, decreaseQuantity } = useCart();
+
+const productInCart = computed(() => {
+  return cart.value.find(item => item.slug === slug);
+});
 
 const handleAddToCart = () => {
   if (product) {
@@ -54,5 +76,13 @@ const handleAddToCart = () => {
       price: product.price
     });
   }
+};
+
+const handleIncrease = () => {
+  increaseQuantity(slug);
+};
+
+const handleDecrease = () => {
+  decreaseQuantity(slug);
 };
 </script>
