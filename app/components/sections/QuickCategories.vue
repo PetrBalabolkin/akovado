@@ -1,6 +1,12 @@
 <template>
   <section class="grid lg:grid-cols-6 md:grid-cols-3 grid-cols-2 gap-5 p-[30px] bg-white md:rounded-[40px] rounded-3xl">
-    <SmallCategoryCard v-for="category in quickCategories" :key="category.title" :title="category.title" :imageSrc="category.imageSrc" />
+    <SmallCategoryCard
+        v-for="category in quickCategories"
+        :key="category.title"
+        :title="category.title"
+        :imageSrc="category.imageSrc"
+        :href="category.href"
+    />
   </section>
 </template>
 
@@ -18,26 +24,32 @@ const quickCategories = [
   {
     title: "Ovozel",
     imageSrc: ovozelImg,
+    href: "/catalog/ovozel",
   },
   {
     title: "Mäso Ryba",
     imageSrc: masorybaImg,
+    href: "/catalog/masoryba",
   },
   {
     title: "Mliečne",
     imageSrc: mliekoImg,
+    href: "/catalog/mlieko",
   },
   {
     title: "Pekáreň",
     imageSrc: pekarenImg,
+    href: "/catalog/pekaren",
   },
   {
     title: "Káva Čaj",
     imageSrc: kavacajImg,
+    href: "/catalog/kavacaj",
   },
   {
     title: "Bistro",
     imageSrc: bistroImg,
+    href: "/catalog/bistro",
   },
 ]
 </script>

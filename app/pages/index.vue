@@ -38,6 +38,9 @@
     <About />
     <Categories />
     <Spam />
+    <Products />
+    <Cta />
+
   </main>
 </template>
 
@@ -46,5 +49,7 @@ import QuickCategories from "~/components/sections/QuickCategories.vue";
 import About from "~/components/sections/About.vue";
 import Categories from "~/components/sections/Categories.vue";
 import Spam from "~/components/sections/Spam.vue";
+import Products from "~/components/sections/products.vue";
+import Cta from "~/components/sections/cta.vue";
 
 </script>

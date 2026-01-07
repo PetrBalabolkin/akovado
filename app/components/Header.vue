@@ -20,8 +20,12 @@
       </div>
     </div>
     <div class="hidden lg:flex justify-between text-base xl:text-xl w-full">
-      <NuxtLink v-for="(category, index) in categories" :key="index" href="#" class="text-text-green-sec hover:text-light-green transition-colors">
-        {{ category }}
+      <NuxtLink
+          v-for="(category, index) in categories"
+          :key="index"
+          :href="category.href"
+          class="text-text-green-sec hover:text-light-green transition-colors">
+        {{ category.title }}
       </NuxtLink>
     </div>
   </header>
@@ -31,18 +35,54 @@
 import {RiHeartLine, RiShoppingCartLine, RiUser3Line} from "@remixicon/vue";
 
 const categories = [
-  "Ovozel",
-  "Mäso Ryba",
-  "Lahôdky",
-  "Mliečne",
-  "Pekáreň",
-  "Špajza",
-  "Snacky",
-  "Káva Čaj",
-  "Nealko",
-  "Alko",
-  "Drogéria",
-  "Bistro",
+  {
+    "title": "Ovozel",
+    "href": "/catalog/ovozel"
+  },
+  {
+    "title": "Mäso Ryba",
+    "href": "/catalog/masoryba"
+  },
+  {
+    "title": "Lahôdky",
+    "href": "/catalog/lahodky"
+  },
+  {
+    "title": "Mliečne",
+    "href": "/catalog/mlieko"
+  },
+  {
+    "title": "Pekáreň",
+    "href": "/catalog/pekaren"
+  },
+  {
+    "title": "Špajza",
+    "href": "/catalog/spajza"
+  },
+  {
+    "title": "Snacky",
+    "href": "/catalog/snacky"
+  },
+  {
+    "title": "Káva Čaj",
+    "href": "/catalog/kavacaj"
+  },
+  {
+    "title": "Nealko",
+    "href": "/catalog/nealko"
+  },
+  {
+    "title": "Alko",
+    "href": "/catalog/alko"
+  },
+  {
+    "title": "Drogéria",
+    "href": "/catalog/drogeria"
+  },
+  {
+    "title": "Bistro",
+    "href": "/catalog/bistro"
+  },
 ]
 
 </script>

@@ -10,6 +10,7 @@
           :title="category.title"
           :imageSrc="category.imageSrc"
           :class="getCategoryClass(index)"
+          :href="category.href"
       />
       <a href="/catalog" class="group h-80 p-6 rounded-[32px] border outline-offset-[-1px] hover:bg-light-green transition-all duration-300 border-light-green inline-flex flex-col justify-end items-start gap-2.5">
         <div class="inline-flex justify-start items-start gap-2.5">
@@ -44,50 +45,62 @@ const categories = [
   {
     title: "Ovozel",
     imageSrc: ovozelImg,
+    href: "/catalog/ovozel",
   },
   {
     title: "Mäso Ryba",
     imageSrc: masorybaImg,
+    href: "/catalog/masoryba",
   },
   {
     title: "Lahôdky",
     imageSrc: lahodkyImg,
+    href: "/catalog/lahodky",
   },
   {
     title: "Pekáreň",
     imageSrc: pekarenImg,
+    href: "/catalog/pekaren",
   },
   {
     title: "Mliečne",
     imageSrc: mliekoImg,
+    href: "/catalog/mlieko",
   },
   {
     title: "Špajza",
     imageSrc: spajzaImg,
+    href: "/catalog/spajza",
   },
   {
     title: "Snacky",
     imageSrc: snackyImg,
+    href: "/catalog/snacky",
   },
   {
     title: "Nealko",
     imageSrc: nealkoImg,
+    href: "/catalog/nealko",
   },
   {
     title: "Káva Čaj",
     imageSrc: kavacajImg,
+    href: "/catalog/kavacaj",
   },
   {
     title: "Alko",
     imageSrc: alkoImg,
+    href: "/catalog/alko",
   },
   {
     title: "Drogéria",
     imageSrc: drogeriaImg,
+    href: "/catalog/drogeria",
   },
   {
     title: "Bistro",
     imageSrc: bistroImg,
+    href: "/catalog/bistro",
   },
 ]
 
